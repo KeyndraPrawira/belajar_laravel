@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Barang;
+use App\Http\Controllers\PostsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -145,6 +146,21 @@ $totalbayar = $total-$potongan-$cashback;
 
 });
 
+//bikin model 
+Route::get('/post', [PostsController::class, 'menampilkan']);
+
+
+// Route::get('/barang', function(){
+
+//     $barang = Barang::where('nama_barang', 'like', '%Sikat Gigi%')->get();
+//     return view('tampil_barang', compact('barang'));
+// }
+// );
+
+Route::get('/barang', [PostsController::class, 'menampilkan2']);
 
 
 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
