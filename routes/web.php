@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Barang;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\SiswasController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -164,3 +165,5 @@ Route::get('/barang', [PostsController::class, 'menampilkan2']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('siswa', SiswasController::class);
