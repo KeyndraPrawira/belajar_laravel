@@ -5,16 +5,17 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Data Siswa</div>
-
+                <div class="card-header">Data PPDB</div>
+            
                 <div class="card-body">
-                    @if (session('success'))
+                @if (session('success'))
                     <div class="alert alert-primary alert-dismissible fade show" role="alert">
                         {{session('success')}};
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                     @endif
-                    <a href="{{ route('siswa.create') }}" class="btn btn-primary">Add</a>
+ 
+                <a href="{{ route('ppdb.create') }}" class="btn btn-primary">Daftar</a>
                 <table class="table" width="100%">
                     <thead>
                         <tr>
@@ -28,17 +29,21 @@
                     </thead>
                     <tbody>
                         @php $no = 1 @endphp
-                        @foreach ($siswa as $data)
+                        @foreach ($ppdb as $data)
                         <tr>
                         <th scope="row">{{$no++}}</th>
-                        <td>{{$data->nis}}</td>
-                        <td>{{$data->nama}}</td>
+                        <td>{{$data->nama_lengkap}}</td>
                         <td>{{$data->jenis_kelamin}}</td>
-                        <td>{{$data->kelas}}</td>
+                        <td>{{$data->agama}}</td>
+                        <td>{{$data->alamat}}</td>
+                        <td>{{$data->telepon}}</td>
+                        <td>{{$data->asal_sekolah}}</td>
+
+
                         
-                        <td><a href="{{route('siswa.edit', $data->id)}}" type="button" class="btn btn-success">edit</a></td>
-                            <td><a href="{{route('siswa.show', $data->id)}}" type="button" class='btn btn-warning'>show</a></td>
-                           <td><form action="{{route('siswa.destroy', $data->id)}}" method="POST">
+                        <td><a href="{{route('ppdb.edit', $data->id)}}" type="button" class="btn btn-success">edit</a></td>
+                            <td><a href="{{route('ppdb.show', $data->id)}}" type="button" class='btn btn-warning'>show</a></td>
+                           <td><form action="{{route('ppdb.destroy', $data->id)}}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda Yakin?')">Delete</button>
@@ -47,7 +52,6 @@
                         </tr>
                         @endforeach
                     </tbody>
-                </table>
                 </div>
             </div>
         </div>

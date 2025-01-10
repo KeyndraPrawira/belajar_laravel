@@ -35,11 +35,13 @@
                             </select>
                     </div>
 
-                    <button type="submit" class="btn btn-primary mt-3" name="tambah">Submit</button>
+                    <button type="submit" class="btn btn-primary mt-3" name="tambah">Daftar</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
 @endsection
