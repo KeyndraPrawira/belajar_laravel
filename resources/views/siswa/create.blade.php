@@ -34,7 +34,11 @@
 
                             </select>
                     </div>
-
+                    <div class="form-group">
+                        <label for="">Cover</label>
+                        <input type="file" class="form-control" id="" name="cover">
+                    </div>
+  
                     <button type="submit" class="btn btn-primary mt-3" name="tambah">Daftar</button>
                     </form>
                 </div>

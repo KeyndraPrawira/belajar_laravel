@@ -35,8 +35,15 @@
 
                             </select>
                     </div>
+                    </div>
+                    <div class="form-group">
+                            <label class="form-label">Cover</label>
+                            <img src="{{ asset('/images/siswa/' . $siswa->cover) }}" width="100">
+                            <input type="file" class="form-control" name="cover">
+                        </div>
 
-                    <button type="submit" class="btn btn-primary mt-3" name="tambah">Update</button>
+
+                    <button type="submit" class="btn btn-primary mt-3" name="edit">Update</button>
                     </form>
                 </div>
             </div>
