@@ -13,7 +13,7 @@
                 @method('PUT')    
                 <div class="form-group mt-3">
                         <label for="nama">Nama </label>
-                        <input type="text" class="form-control" disabled id="nama" value="{{$genre->nama_genre}}" name="nama">
+                        <input type="text" class="form-control" disabled id="nama" value="{{$genre->genre}}" name="nama">
                     </div>
 
 
